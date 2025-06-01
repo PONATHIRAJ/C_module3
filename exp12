@@ -1,48 +1,97 @@
+# TL-SK3
 
-EX NO 12 : C PROGRAM TO CHECK WHETHER THE GIVEN NUMBER IS PRIME OR NOT
-DATE:01-05-2025
+**ABCD Parameters in High-Frequency Cu–Carbon Hybrid Interconnects**
 
+![Cu–Carbon Hybrid Interconnect](https://www.nature.com/articles/s41598-024-81729-9/figures/5)
 
-AIM:
-To write a program to check whether the given number is prime or not
+---
 
-ALGORITHM:
-1. Start
-2. Declare the variable i.
-3. Read the value given using scanf.
-4. Check whether the given number is prime or not using if-else statement condition.
-5. If true,print ("%d is a prime number.",i).
-6. If false, print ("%d is not a prime number.",i).
-7. End.
+### 1. Introduction
 
-PROGRAM:
-#include<stdio.h> 
-int main()
-{
-int i; 
-scanf("%d",&i);
-if(i%2==1 && i%1==0)
-{
-printf("%d is a prime number.",i);
-}
-else
-{
-printf("%d is not a prime number.",i);
-}
-return 0;
-}
+In high-speed electronic systems, maintaining signal integrity across interconnects is paramount. Traditional copper interconnects face challenges such as increased resistance and signal degradation at higher frequencies. Recent advancements have introduced **Cu–Carbon hybrid interconnects**, which combine copper with carbon-based materials to enhance performance. The analysis and modeling of these interconnects often utilize **ABCD parameters** (also known as transmission parameters) to characterize their behavior accurately.
 
+---
 
-C program to check whether the given number is prime or not
+### 2. ABCD Parameters Overview
 
-Developed by:  Manoj S
-RegisterNumber:  212223060154
+ABCD parameters relate the input and output voltages and currents of a two-port network:
 
-INPUT: 
-53
+\[
+\begin{bmatrix}
+V_1 \\
+I_1
+\end{bmatrix}
+=
+\begin{bmatrix}
+A & B \\
+C & D
+\end{bmatrix}
+\begin{bmatrix}
+V_2 \\
+I_2
+\end{bmatrix}
+\]
 
-OUTPUT:
-53 is a prime number.
+Where:
+- \( V_1, I_1 \): Input voltage and current
+- \( V_2, I_2 \): Output voltage and current
+- \( A, B, C, D \): Transmission parameters
 
-RESULT:
-Thus, the program is executed and verified successfully
+These parameters are particularly useful for analyzing cascaded networks and are instrumental in high-frequency circuit design.
+
+---
+
+### 3. Practical Application: Cu–Carbon Hybrid Interconnects
+
+Recent studies have demonstrated that Cu–Carbon hybrid interconnects exhibit superior performance compared to traditional copper interconnects, especially at frequencies up to 100 GHz. Key findings include:
+
+- **Lower Impedance**: Cu–Carbon hybrids have approximately 80% lower impedance at 100 GHz compared to pure copper interconnects.
+- **Enhanced Signal Transmission**: They show ~30% higher forward transmission coefficients (\( S_{21} \)) for single-line interconnects and ~38% for two-line coupled interconnects.
+- **Reduced Return Loss**: The return loss coefficient (\( S_{11} \)) is reduced by ~43% in single-line configurations.
+
+These improvements are attributed to the unique electrical properties of the carbon materials integrated into the copper matrix.
+
+---
+
+### 4. Equations and Modeling
+
+The ABCD parameters for a transmission line can be derived using the telegrapher's equations:
+
+\[
+\begin{aligned}
+V_1 &= V_2 \cosh(\gamma l) + I_2 Z_0 \sinh(\gamma l) \\
+I_1 &= \frac{V_2}{Z_0} \sinh(\gamma l) + I_2 \cosh(\gamma l)
+\end{aligned}
+\]
+
+Where:
+- \( \gamma \): Propagation constant
+- \( Z_0 \): Characteristic impedance
+- \( l \): Length of the transmission line
+
+For Cu–Carbon hybrid interconnects, these parameters are adjusted to account for the composite material properties, leading to more accurate modeling at high frequencies.
+
+---
+
+### 5. Current Research and Developments
+
+The integration of carbon-based materials into copper interconnects is a burgeoning area of research. Studies focus on:
+
+- **Material Composition**: Optimizing the ratio of copper to carbon to achieve desired electrical properties.
+- **Manufacturing Techniques**: Developing scalable methods for producing Cu–Carbon hybrid interconnects.
+- **Performance Analysis**: Utilizing ABCD parameters to model and predict the behavior of these interconnects in various configurations.
+
+These efforts aim to address the limitations of traditional interconnects and meet the demands of next-generation high-speed electronic systems.
+
+---
+
+### 6. References
+
+1. [ABCD Parameters of Transmission Line](https://www.electrical4u.com/abcd-parameters-of-transmission-line/)
+2. [Cadence System Analysis: ABCD Parameters](https://resources.system-analysis.cadence.com/blog/msa2021-abcd-parameters-of-transmission-lines)
+3. [Nature Article on Cu–Carbon Hybrid Interconnects](https://www.nature.com/articles/s41598-024-81729-9)
+4. [Wikipedia: Two-Port Network](https://en.wikipedia.org/wiki/Two-port_network)
+
+---
+
+*Note: The image used is sourced from the Nature article linked above.*
